@@ -1,0 +1,28 @@
+<div>
+  <label><strong>Filter by Launch Year:</strong></label>
+  <input type="number" [(ngModel)]="launchYear" />
+  <button (click)="filter()">Filter</button>
+</div>
+
+<div>
+  <strong>Launch</strong><br />
+  <input type="radio" name="launch" [value]="true" [(ngModel)]="launchSuccess" /> Successful
+  <input type="radio" name="launch" [value]="false" [(ngModel)]="launchSuccess" /> Failed
+</div>
+
+<div>
+  <strong>Landing</strong><br />
+  <input type="radio" name="landing" [value]="true" [(ngModel)]="landingSuccess" /> Successful
+  <input type="radio" name="landing" [value]="false" [(ngModel)]="landingSuccess" /> Failed
+</div>
+
+<button (click)="reset()">Reset Filters</button>
+
+<hr />
+
+<div *ngFor="let mission of filteredMissions" style="background-color: lightblue; margin: 10px; padding: 10px; border: 1px solid black;">
+  <img [src]="mission.links.mission_patch_small" width="100" />
+  <h2>{{ mission.mission_name }}</h2>
+  <p>{{ mission.launch_year }}</p>
+  <p>{{ mission.details }}</p>
+</div>
