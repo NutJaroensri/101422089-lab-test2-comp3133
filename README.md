@@ -9,7 +9,7 @@ This Angular application displays a list of SpaceX missions
 
 ## Features Implemented
 ### User can view list of spaceX missions
-### Filter by launch year
+### Filter by launch year, enter all the details want to filter, then press Filter to see the result
 ### See the mission details also with links for extra details
 
 ## How to Run
